@@ -1,0 +1,15 @@
+| Endpoint             | Method | Deskripsi                       |
+| -------------------- | ------ | ------------------------------- |
+| `/api/auth/register` | POST   | Daftar user baru                |
+| `/api/auth/login`    | POST   | Login user & dapatkan token JWT |
+| `/api/data`          | POST   | Kirim data IoT                  |
+| `/api/data`          | GET    | Ambil data IoT terakhir         |
+| `/`                  | GET    | Tes server online               |
+
+
+Endpoint	Method	Deskripsi	Akses
+/api/auth/register	POST	Registrasi user baru (user/admin)	Publik
+/api/auth/login	POST	Login dan dapatkan JWT token	Publik
+/api/data	POST	Kirim data IoT dari perangkat	Publik (IoT)
+/api/data/:id_perangkat	GET	Ambil data berdasarkan ID perangkat	User (butuh token)
+/api/data/all	GET	Ambil semua data untuk dashboard admin	Admin (butuh token)
